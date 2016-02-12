@@ -11,6 +11,15 @@ $ sudo easy_install pip
 
 If that doesn't work - go read [this](http://www.dabapps.com/blog/introduction-to-pip-and-virtualenv-python/). If you have dependency or permission problems your best bet is to use virtualenv (described in that link).
 
+For Ubuntu-based systems (e.g. your OpsManager VM), you might need to update/install few packages first:
+
+```
+$ sudo apt-get update
+$ sudo apt-get install git
+$ sudo apt-get install python-pip
+```
+
+
 You need to edit conf.toml and enter your Pivotal Network API key:
 
 Get your Pivotal Network API Key by logging into http://network.pivotal.io - it's at the bottom of your profile page.
@@ -27,6 +36,15 @@ The first thing you need to do before downloading / uploading pivotal products i
 
 ```
 $ python gng.py --update
+```
+
+If you run into issues with libraries, you might need to install libraries yourself, e.g.
+
+```
+$ sudo pip install toml
+$ sudo pip sqlalchemy
+$ sudo pip tabulate
+$ sudo pip install argparse
 ```
 
 ## Dump the product list to a text file
